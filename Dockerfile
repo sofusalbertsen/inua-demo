@@ -1,2 +1,3 @@
 FROM alpine
-CMD ["echo","hello","world"]
+ARG VERSION=not-set
+CMD ["echo","hello","world","${VERSION}"]
