@@ -1,3 +1,4 @@
 FROM alpine
-ARG VERSION=not-set
-CMD ["echo","hello","world","${VERSION}"]
+ARG VERSION
+ENV VERSION=${VERSION:-development}
+CMD ["sh", "-c", "echo hello world ${VERSION}"]
